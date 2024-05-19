@@ -1,0 +1,6 @@
+
+
+TO select any chess piece click on the game object in the hierarchy inside "player position"
+
+
+since i did not know if you wanted the box collider functionality i did not use it to select the chess piece
