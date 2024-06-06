@@ -12,6 +12,7 @@ public sealed class ChessBoardPlacementHandler : MonoBehaviour {
     private GameObject PlayerPosition;
 
     public GameObject selected;
+    [SerializeField] float selectrange;
 
     internal static ChessBoardPlacementHandler Instance;
 
@@ -108,14 +109,22 @@ public sealed class ChessBoardPlacementHandler : MonoBehaviour {
 
     private void Update()
     {
-        if(selected!= Selection.activeGameObject)
+        if (Input.GetMouseButtonDown(0))
         {
-            ClearHighlights();
+            Vector3 mousePos = Input.mousePosition;
+            Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y,Camera.main.nearClipPlane));
+            Ray ray = Camera.main.ScreenPointToRay(mousePos);
 
-            selected = Selection.activeGameObject;
-            
-                if(selected.GetComponent<IInteractable>()!=null) selected.GetComponent<IInteractable>().highlight(); 
-            
+            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("detectable"))
+            {
+                Vector3 objScreenPos = Camera.main.WorldToScreenPoint(obj.transform.position);
+                if (Mathf.Abs(objScreenPos.x - mousePos.x) < selectrange && Mathf.Abs(objScreenPos.y - mousePos.y) < selectrange)
+                {
+                    selected = obj;
+                    ClearHighlights();
+                    if (selected.GetComponent<IInteractable>() != null) selected.GetComponent<IInteractable>().highlight();
+                }
+            }
         }
     }
 }
