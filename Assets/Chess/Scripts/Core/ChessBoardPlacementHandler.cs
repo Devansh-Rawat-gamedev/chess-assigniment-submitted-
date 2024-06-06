@@ -109,20 +109,46 @@ public sealed class ChessBoardPlacementHandler : MonoBehaviour {
 
     private void Update()
     {
+
+        //raycast approach
+
+        // if (Input.GetMouseButtonDown(0))
+        //{
+        //    Vector3 mousePos = Input.mousePosition;
+        //    Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y,Camera.main.nearClipPlane));
+        //    Ray ray = Camera.main.ScreenPointToRay(mousePos);
+        //
+        //    foreach (GameObject obj in GameObject.FindGameObjectsWithTag("detectable"))
+        //    {
+        //        Vector3 objScreenPos = Camera.main.WorldToScreenPoint(obj.transform.position);
+        //        if (Mathf.Abs(objScreenPos.x - mousePos.x) < selectrange && Mathf.Abs(objScreenPos.y - mousePos.y) < selectrange)
+        //        {
+        //            selected = obj;
+        //            ClearHighlights();
+        //            if (selected.GetComponent<IInteractable>() != null) selected.GetComponent<IInteractable>().highlight();
+        //        }
+        //    }
+        //}
+
+        //box collider approcah require box collider on all chess piece
+
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 mousePos = Input.mousePosition;
-            Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y,Camera.main.nearClipPlane));
-            Ray ray = Camera.main.ScreenPointToRay(mousePos);
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
-            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("detectable"))
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+
+            if (hit.collider != null)
             {
-                Vector3 objScreenPos = Camera.main.WorldToScreenPoint(obj.transform.position);
-                if (Mathf.Abs(objScreenPos.x - mousePos.x) < selectrange && Mathf.Abs(objScreenPos.y - mousePos.y) < selectrange)
+                
+                selected = hit.collider.gameObject;
+                ClearHighlights();
+
+                IInteractable interactable = selected.GetComponent<IInteractable>();
+                if (interactable != null)
                 {
-                    selected = obj;
-                    ClearHighlights();
-                    if (selected.GetComponent<IInteractable>() != null) selected.GetComponent<IInteractable>().highlight();
+                    interactable.highlight();
                 }
             }
         }
