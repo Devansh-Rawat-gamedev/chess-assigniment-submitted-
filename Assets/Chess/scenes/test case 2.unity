@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 60290584}
   m_Layer: 0
   m_Name: Queen
-  m_TagString: Queen
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -745,6 +745,7 @@ MonoBehaviour:
   - {fileID: 209010543}
   _highlightPrefab: {fileID: 3575455442422821219, guid: 63e242f84ee31dd49b18bb41b8d1c522, type: 3}
   selected: {fileID: 0}
+  selectrange: 26
 --- !u!1 &280411635
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +759,7 @@ GameObject:
   - component: {fileID: 280411638}
   m_Layer: 0
   m_Name: Rook
-  m_TagString: Rook
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1090,7 +1091,7 @@ GameObject:
   - component: {fileID: 309589166}
   m_Layer: 0
   m_Name: Pawn
-  m_TagString: Pawn
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1350,7 +1351,7 @@ GameObject:
   - component: {fileID: 354243241}
   m_Layer: 0
   m_Name: Bishop
-  m_TagString: Bishop
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1715,7 +1716,7 @@ GameObject:
   - component: {fileID: 409402679}
   m_Layer: 0
   m_Name: Pawn
-  m_TagString: Pawn
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1946,7 +1947,7 @@ GameObject:
   - component: {fileID: 436799128}
   m_Layer: 0
   m_Name: Pawn
-  m_TagString: Pawn
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2043,7 +2044,7 @@ GameObject:
   - component: {fileID: 451512800}
   m_Layer: 0
   m_Name: King
-  m_TagString: King
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2537,7 +2538,7 @@ GameObject:
   - component: {fileID: 755527377}
   m_Layer: 0
   m_Name: Knight
-  m_TagString: Knight
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2768,7 +2769,7 @@ GameObject:
   - component: {fileID: 969461838}
   m_Layer: 0
   m_Name: Pawn
-  m_TagString: Pawn
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2999,7 +3000,7 @@ GameObject:
   - component: {fileID: 1126575668}
   m_Layer: 0
   m_Name: Pawn
-  m_TagString: Pawn
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3297,7 +3298,7 @@ GameObject:
   - component: {fileID: 1285433206}
   m_Layer: 0
   m_Name: Bishop
-  m_TagString: Bishop
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3528,7 +3529,7 @@ GameObject:
   - component: {fileID: 1342563079}
   m_Layer: 0
   m_Name: Knight
-  m_TagString: Knight
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3890,7 +3891,7 @@ GameObject:
   - component: {fileID: 1486999845}
   m_Layer: 0
   m_Name: Pawn
-  m_TagString: Pawn
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4459,7 +4460,7 @@ GameObject:
   - component: {fileID: 1707383401}
   m_Layer: 0
   m_Name: Pawn
-  m_TagString: Pawn
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4556,7 +4557,7 @@ GameObject:
   - component: {fileID: 1723691868}
   m_Layer: 0
   m_Name: Pawn
-  m_TagString: Pawn
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5017,7 +5018,7 @@ GameObject:
   - component: {fileID: 2003609499}
   m_Layer: 0
   m_Name: Rook
-  m_TagString: Rook
+  m_TagString: detectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
